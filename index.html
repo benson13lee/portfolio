@@ -103,6 +103,7 @@
           class="about-portrait"
           style="background-image: url(&quot;images/benson-headshot.jpg&quot;)"
         ></div>
+
         <div class="about-body">
           <p>
             I've spent ten years producing, coordinating, and communicating
@@ -196,9 +197,11 @@
         </div>
       </div>
     </section>
-
+    <div class="separater-container" style="padding-top: 4rem">
+      <div class="separater"></div>
+    </div>
     <!-- WORKS -->
-    <section id="works">
+    <section id="works" style="padding-top: 2rem">
       <div class="section-head reveal">
         <div class="mono section-num">02 / Selected Works</div>
         <h2 class="display section-title">
@@ -206,11 +209,13 @@
         </h2>
       </div>
 
-      <p class="works-intro reveal">
-        A curated look at gaming partnerships, theatrical campaigns, events I've
-        hosted or coordinated, and the advocacy work that shaped how I think
-        about storytelling.
-      </p>
+      <div class="works-container">
+        <p class="works-intro reveal">
+          A curated look at gaming partnerships, theatrical campaigns, events
+          I've hosted or coordinated, and the advocacy work that shaped how I
+          think about storytelling.
+        </p>
+      </div>
 
       <!-- SELECTED CAMPAIGNS -->
       <div class="category reveal">
@@ -801,12 +806,35 @@
         </div>
       </div>
     </section>
+    <div class="separater-container-full">
+      <div class="separater"></div>
+    </div>
 
-    <footer>
+    <footer class="big-footer">
       <div>© 2026 Benson Lee. Built with care in Vancouver.</div>
       <div class="mono">v0.1 / Milestone 1</div>
     </footer>
+    <footer class="small-footer">
+      <div>© 2026 Benson Lee</div>
+      <div class="mono">v0.1</div>
+    </footer>
+    <div class="mobile-nav-arrows" aria-label="Mobile section navigation">
+      <a
+        href="#home"
+        class="mobile-arrow-btn mobile-prev-btn"
+        aria-label="Go to previous section"
+      >
+        ↑
+      </a>
 
+      <a
+        href="#about"
+        class="mobile-arrow-btn mobile-next-btn"
+        aria-label="Go to next section"
+      >
+        ↓
+      </a>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
