@@ -13,16 +13,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="top-section">
-      <nav>
-        <div class="brand">Benson Lee</div>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="separater"></div>
+    <section id="home" class="top-section">
+      <div class="nav-container">
+        <nav>
+          <a href="#home" style="padding: 0">
+            <div class="brand">Benson Lee</div>
+          </a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="separater"></div>
+      </div>
+      <div class="space-holder">
+        <nav>
+          <a href="#home" style="padding: 0">
+            <div class="brand">Benson Lee</div>
+          </a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="separater"></div>
+      </div>
+
       <div class="hero-top">
         <div class="hero-meta fade-in">
           <div class="mono">Portfolio / 2026</div>
@@ -31,28 +49,44 @@
       </div>
 
       <!-- HERO -->
-      <header class="hero">
-        <h1 class="display hero-name fade-in delay-1">Benson Lee</h1>
-
-        <div class="display hero-tagline fade-in delay-2">
-          Storyteller &amp; <em>producer.</em>
+      <div class="hero">
+        <div class="grid-items">
+          <div class="display hero-name fade-in delay-1">Benson Lee</div>
+        </div>
+        <div class="grid-items">
+          <div class="display hero-tagline fade-in delay-2">
+            Storyteller &amp; <em>producer.</em>
+          </div>
         </div>
 
-        <p class="hero-sub fade-in delay-3">
-          I've led brand campaigns across entertainment, advocacy, and consumer
-          products — bilingual across English and Mandarin, at home behind the
-          scenes and on the mic.
-        </p>
+        <div class="grid-items">
+          <p class="hero-sub fade-in delay-3">
+            I've led brand campaigns across entertainment, advocacy, and
+            consumer products — bilingual across English and Mandarin, at home
+            behind the scenes and on the mic.
+          </p>
+        </div>
 
-        <div class="hero-cta fade-in delay-4">
-          <a href="#works" class="btn btn-primary"
-            >See the work <span class="btn-arrow">→</span></a
-          >
-          <a href="#contact" class="btn btn-ghost">Say hello</a>
+        <div class="grid-items">
+          <div class="hero-cta fade-in delay-4">
+            <a href="#works" class="btn btn-primary"
+              >See the work <span class="btn-arrow">→</span></a
+            >
+            <a href="#contact" class="btn btn-ghost">Say hello</a>
+          </div>
+          <div class="hero-btn fade-in delay-4">
+            <a href="#works" class="btn btn-primary"
+              >work <span class="btn-arrow">→</span></a
+            >
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
         </div>
 
         <div class="scroll-hint fade-in delay-5">Scroll ↓</div>
-      </header>
+      </div>
+    </section>
+    <div class="separater-container">
+      <div class="separater"></div>
     </div>
 
     <!-- ABOUT -->
