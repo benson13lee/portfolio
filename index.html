@@ -1,1055 +1,840 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Benson Lee — Storyteller & Producer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cream: #F2EDE1;
-    --cream-darker: #E8E2D2;
-    --ink: #1A1A1A;
-    --ink-soft: #2D2D2D;
-    --mute: #9B9B8F;
-    --neon: #C6FF3D;
-    --neon-deep: #AFE82C;
-    --rule: rgba(26, 26, 26, 0.12);
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benson Lee — Storyteller & Producer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="home" class="top-section">
+      <div class="nav-container">
+        <nav>
+          <a href="#home" style="padding: 0">
+            <div class="brand">Benson Lee</div>
+          </a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="separater"></div>
+      </div>
+      <div class="space-holder">
+        <nav>
+          <a href="#home" style="padding: 0">
+            <div class="brand">Benson Lee</div>
+          </a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="separater"></div>
+      </div>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    overflow-x: hidden;
-    background-image:
-      radial-gradient(rgba(26,26,26,0.03) 1px, transparent 1px);
-    background-size: 3px 3px;
-  }
-
-  .display { font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -0.02em; }
-  .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; }
-
-  /* NAVIGATION */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1.4rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(242, 237, 225, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 100;
-    border-bottom: 1px solid var(--rule);
-  }
-  nav .brand {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: 1.15rem;
-    letter-spacing: -0.01em;
-  }
-  nav .brand::after {
-    content: " ●";
-    color: var(--neon-deep);
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2.2rem;
-  }
-  nav a {
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    position: relative;
-    padding: 0.3rem 0;
-    transition: color 0.2s ease;
-  }
-  nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--neon);
-    transition: width 0.3s ease;
-  }
-  nav a:hover::after { width: 100%; }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    padding: 8rem 2.5rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    position: relative;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .hero-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    color: var(--mute);
-  }
-
-  .hero-name {
-    font-size: clamp(4rem, 14vw, 11rem);
-    line-height: 0.92;
-    font-weight: 400;
-    margin-top: 2.5rem;
-    letter-spacing: -0.04em;
-  }
-
-  .hero-tagline {
-    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
-    line-height: 1.1;
-    font-weight: 300;
-    font-style: italic;
-    margin-top: 1.5rem;
-    color: var(--ink-soft);
-    max-width: 1000px;
-  }
-  .hero-tagline em {
-    font-style: italic;
-    font-weight: 300;
-    position: relative;
-    display: inline-block;
-  }
-  .hero-tagline em::after {
-    content: '';
-    position: absolute;
-    left: -2px;
-    right: -2px;
-    bottom: 0.06em;
-    height: 0.32em;
-    background: var(--neon);
-    z-index: -1;
-    transform: skewX(-4deg);
-  }
-
-  .hero-headline {
-    font-size: clamp(3rem, 9vw, 7.5rem);
-    line-height: 0.95;
-    font-weight: 300;
-    margin-top: 3rem;
-    max-width: 1200px;
-  }
-  .hero-headline em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--ink);
-    position: relative;
-    display: inline-block;
-  }
-  .hero-headline em::after {
-    content: '';
-    position: absolute;
-    left: -4px;
-    right: -4px;
-    bottom: 0.08em;
-    height: 0.35em;
-    background: var(--neon);
-    z-index: -1;
-    transform: skewX(-4deg);
-  }
-
-  .hero-sub {
-    font-size: 1.2rem;
-    font-weight: 400;
-    max-width: 620px;
-    margin-top: 2.5rem;
-    color: var(--ink-soft);
-    line-height: 1.55;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.85rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.25s ease;
-  }
-  .btn-primary {
-    background: var(--ink);
-    color: var(--cream);
-    border: 1px solid var(--ink);
-  }
-  .btn-primary:hover {
-    background: var(--neon);
-    color: var(--ink);
-    border-color: var(--neon);
-  }
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink);
-    border: 1px solid var(--ink);
-  }
-  .btn-ghost:hover {
-    background: var(--ink);
-    color: var(--cream);
-  }
-  .btn-arrow { transition: transform 0.2s ease; }
-  .btn:hover .btn-arrow { transform: translateX(4px); }
-
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    right: 2.5rem;
-    color: var(--mute);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
-  }
-
-  /* SECTION PRIMITIVES */
-  section {
-    padding: 6rem 2.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .section-head {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 3.5rem;
-    margin-bottom: 4rem;
-    align-items: baseline;
-    border-top: 1px solid var(--rule);
-    padding-top: 2rem;
-  }
-  .section-num {
-    color: var(--mute);
-  }
-  .section-title {
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-  }
-  .section-title em {
-    font-style: italic;
-    color: var(--ink-soft);
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 3.5rem;
-    align-items: start;
-  }
-  .about-portrait {
-    aspect-ratio: 4/5;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--cream-darker);
-    position: relative;
-  }
-  .about-portrait::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: -12px;
-    bottom: -12px;
-    border: 1px solid var(--ink);
-    z-index: -1;
-  }
-  .about-body {
-    max-width: 700px;
-  }
-  .about-body p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    color: var(--ink-soft);
-  }
-  .about-body p em {
-    background: linear-gradient(to bottom, transparent 65%, var(--neon) 65%, var(--neon) 92%, transparent 92%);
-    font-style: normal;
-    padding: 0 2px;
-  }
-
-  .timeline {
-    margin-top: 3rem;
-    border-left: 1px solid var(--rule);
-    padding-left: 1.5rem;
-  }
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 1.5rem;
-    padding: 0.7rem 0;
-    position: relative;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -1.9rem;
-    top: 1.25rem;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--ink);
-    border: 2px solid var(--cream);
-  }
-  .timeline-item.highlight::before {
-    background: var(--neon);
-  }
-
-  /* Timeline hover popup photo */
-  .timeline-item.has-popup { cursor: pointer; }
-  .timeline-popup {
-    position: absolute;
-    left: calc(100% + 1.5rem);
-    top: 50%;
-    transform: translateY(-50%) translateX(-12px);
-    width: 200px;
-    aspect-ratio: 4/5;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--cream-darker);
-    box-shadow: 0 12px 32px rgba(26, 26, 26, 0.18), 0 0 0 1px var(--rule);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.3s ease;
-    z-index: 50;
-  }
-  .timeline-item.has-popup:hover .timeline-popup {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-  }
-  .timeline-popup::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -8px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid var(--cream);
-  }
-  .timeline-hint {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-left: 0.5rem;
-    padding: 0.1rem 0.5rem;
-    background: var(--neon);
-    color: var(--ink);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 500;
-    vertical-align: middle;
-  }
-  .timeline-year {
-    color: var(--mute);
-    font-size: 0.85rem;
-    padding-top: 0.2rem;
-  }
-  .timeline-text {
-    color: var(--ink-soft);
-    font-size: 1rem;
-  }
-
-  /* WORKS */
-  .works-intro {
-    color: var(--ink-soft);
-    font-size: 1.05rem;
-    max-width: 680px;
-    margin-bottom: 4rem;
-    padding-left: calc(360px + 3.5rem);
-  }
-
-  .category {
-    margin-bottom: 5rem;
-  }
-  .category-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-  }
-  .category-name {
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-    letter-spacing: -0.01em;
-  }
-  .category-count {
-    color: var(--mute);
-  }
-
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .work-card {
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    position: relative;
-  }
-  a.work-card { cursor: pointer; }
-  div.work-card { cursor: default; }
-  .work-card:hover { transform: translateY(-2px); }
-  .work-card .work-thumb {
-    position: relative;
-    box-shadow: 0 0 0 0 var(--neon);
-    transition: box-shadow 0.25s ease;
-  }
-  .work-card:hover .work-thumb {
-    box-shadow: 0 0 0 3px var(--neon);
-  }
-
-  .work-thumb {
-    aspect-ratio: 16/10;
-    background: linear-gradient(135deg, var(--cream-darker), var(--mute));
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink-soft);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  .work-thumb.has-image { background-color: var(--ink); }
-  .work-thumb.has-image::before { display: none; }
-  .work-thumb.has-image .work-thumb-label {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    background: rgba(242, 237, 225, 0.95);
-    backdrop-filter: blur(4px);
-    font-size: 0.7rem;
-  }
-
-  /* Hover indicator arrow for clickable cards */
-  .work-card .hover-indicator {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 32px;
-    height: 32px;
-    background: var(--neon);
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0;
-    transform: translateY(-4px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    pointer-events: none;
-    z-index: 2;
-  }
-  a.work-card:hover .hover-indicator {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Hover-to-play video for Uncharted */
-  .work-thumb-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  .work-card:hover .work-thumb-video {
-    opacity: 1;
-  }
-
-  /* Hover-swap alternate image */
-  .work-thumb-alt {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 1;
-  }
-  .work-card:hover .work-thumb-alt {
-    opacity: 1;
-  }
-  /* Keep label above the alt image */
-  .work-thumb.has-image .work-thumb-label {
-    z-index: 3;
-  }
-  .work-thumb::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      135deg,
-      transparent,
-      transparent 8px,
-      rgba(26, 26, 26, 0.04) 8px,
-      rgba(26, 26, 26, 0.04) 9px
-    );
-  }
-  .work-thumb-label {
-    position: relative;
-    z-index: 1;
-    background: var(--cream);
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--rule);
-  }
-
-  .work-title {
-    font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-    line-height: 1.3;
-  }
-  .work-role {
-    color: var(--mute);
-    font-size: 0.85rem;
-  }
-
-  /* CONTACT */
-  .contact-section {
-    padding: 8rem 2.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    border-top: 1px solid var(--rule);
-  }
-  .contact-headline {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    margin-bottom: 3rem;
-    max-width: 900px;
-  }
-  .contact-headline em {
-    font-style: italic;
-    position: relative;
-  }
-  .contact-headline em::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0.05em;
-    height: 0.15em;
-    background: var(--neon);
-    z-index: -1;
-  }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 2rem;
-  }
-  .contact-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    max-width: 800px;
-  }
-  .contact-link {
-    display: block;
-    padding: 1.5rem;
-    border: 1px solid var(--rule);
-    text-decoration: none;
-    color: var(--ink);
-    transition: all 0.25s ease;
-    background: var(--cream);
-  }
-  .contact-link:hover {
-    border-color: var(--ink);
-    background: var(--ink);
-    color: var(--cream);
-  }
-  .contact-link-label {
-    color: var(--mute);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-  }
-  .contact-link:hover .contact-link-label { color: var(--neon); }
-  .contact-link-value {
-    font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 3rem 2.5rem 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--mute);
-    font-size: 0.82rem;
-    border-top: 1px solid var(--rule);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    nav ul { gap: 1.2rem; }
-    nav a { font-size: 0.78rem; }
-    .hero { padding: 6rem 1.5rem 3rem; }
-    section { padding: 4rem 1.5rem; }
-    .section-head, .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-portrait { aspect-ratio: 4/5; max-width: 280px; }
-    .works-intro { padding-left: 0; }
-    .hero-cta { flex-direction: column; align-items: stretch; }
-    .btn { justify-content: center; }
-    .scroll-hint { display: none; }
-    .contact-section { padding: 5rem 1.5rem; }
-    footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; align-items: flex-start; }
-  }
-
-  /* REVEAL ON SCROLL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* HERO STAGGER ON LOAD */
-  .fade-in {
-    opacity: 0;
-    animation: fadeUp 0.9s ease forwards;
-  }
-  .fade-in.delay-1 { animation-delay: 0.1s; }
-  .fade-in.delay-2 { animation-delay: 0.25s; }
-  .fade-in.delay-3 { animation-delay: 0.4s; }
-  .fade-in.delay-4 { animation-delay: 0.55s; }
-  .fade-in.delay-5 { animation-delay: 0.7s; }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="brand">Benson Lee</div>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#works">Works</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-meta fade-in">
-    <div class="mono">Portfolio / 2026</div>
-    <div class="mono">Vancouver, BC</div>
-  </div>
-
-  <h1 class="display hero-name fade-in delay-1">Benson Lee</h1>
-
-  <div class="display hero-tagline fade-in delay-2">
-    Storyteller &amp; <em>producer.</em>
-  </div>
-
-  <p class="hero-sub fade-in delay-3">
-    I've led brand campaigns across entertainment, advocacy, and consumer products — bilingual across English and Mandarin, at home behind the scenes and on the mic.
-  </p>
-
-  <div class="hero-cta fade-in delay-4">
-    <a href="#works" class="btn btn-primary">See the work <span class="btn-arrow">→</span></a>
-    <a href="#contact" class="btn btn-ghost">Say hello</a>
-  </div>
-
-  <div class="scroll-hint fade-in delay-5">Scroll ↓</div>
-</header>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-head reveal">
-    <div class="mono section-num">01 / About</div>
-    <h2 class="display section-title">I help projects and moments <em>land.</em></h2>
-  </div>
-
-  <div class="about-grid reveal">
-    <div class="about-portrait" style="background-image: url('images/benson-headshot.jpg');"></div>
-    <div class="about-body">
-      <p>
-        I've spent ten years producing, coordinating, and communicating across the entertainment world. I started in a public relations agency at Ogilvy, ran digital and media work for the Taiwan Equality Campaign during one of the most pivotal moments in Taiwanese civil rights history, and spent five years at Sony Pictures Entertainment — first as <em>Publicity Supervisor</em>, then as <em>Marketing Supervisor for Partnerships and Promotions</em>.
-      </p>
-      <p>
-        My work has always sat in between things: between creative and logistics, between brand and audience, between the thing being made and the people it's being made for. At Sony, I localized global deals and finding new ways to extend them in the Taiwan market. I like that middle place. I am the bridge, and I build the rapport. It's where most of the actual work happens.
-      </p>
-      <p>
-        I recently moved to Vancouver, and I'm building what comes next — open to full-time roles, freelance projects, and the occasional microphone.
-      </p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year mono">2012</div>
-          <div class="timeline-text">Graduated Bachelor of Business Administration in Finance from National Central University, Taiwan</div>
+      <div class="hero-top">
+        <div class="hero-meta fade-in">
+          <div class="mono">Portfolio / 2026</div>
+          <div class="mono">Vancouver, BC</div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year mono">2015</div>
-          <div class="timeline-text">Joined Ogilvy — accounts for Heineken, Xbox, Asics and more</div>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="grid-items">
+          <div class="display hero-name fade-in delay-1">Benson Lee</div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year mono">2018</div>
-          <div class="timeline-text">Digital Communication &amp; PR Manager at Taiwan Equality Campaign, during the marriage equality movement</div>
-        </div>
-        <div class="timeline-item highlight">
-          <div class="timeline-year mono">2019</div>
-          <div class="timeline-text">Lobbied for same-sex marriage law — Taiwan became the first country in Asia to legalize it</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year mono">2020</div>
-          <div class="timeline-text">Publicity Supervisor at Sony Pictures Entertainment</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year mono">2022</div>
-          <div class="timeline-text">Moved to Marketing Supervisor, Partnerships &amp; Promotions at Sony Pictures Entertainment</div>
-        </div>
-        <div class="timeline-item highlight has-popup">
-          <div class="timeline-year mono">2023</div>
-          <div class="timeline-text">
-            Received Sony Pictures Entertainment's Rainbow of Excellence Award for outstanding partnership performance on Spider-Man: Across the Spider-Verse — selected as one promotions manager out of 20+ global branches<span class="timeline-hint">Take a peek ↗</span>
+        <div class="grid-items">
+          <div class="display hero-tagline fade-in delay-2">
+            Storyteller &amp; <em>producer.</em>
           </div>
-          <div class="timeline-popup" style="background-image: url('images/rainbow-of-excellence.jpg');"></div>
         </div>
-        <div class="timeline-item highlight">
-          <div class="timeline-year mono">2025</div>
-          <div class="timeline-text">Moved to Vancouver — a new chapter</div>
+
+        <div class="grid-items">
+          <p class="hero-sub fade-in delay-3">
+            I've led brand campaigns across entertainment, advocacy, and
+            consumer products — bilingual across English and Mandarin, at home
+            behind the scenes and on the mic.
+          </p>
         </div>
+
+        <div class="grid-items">
+          <div class="hero-cta fade-in delay-4">
+            <a href="#works" class="btn btn-primary"
+              >See the work <span class="btn-arrow">→</span></a
+            >
+            <a href="#contact" class="btn btn-ghost">Say hello</a>
+          </div>
+          <div class="hero-btn fade-in delay-4">
+            <a href="#works" class="btn btn-primary"
+              >work <span class="btn-arrow">→</span></a
+            >
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+        </div>
+
+        <div class="scroll-hint fade-in delay-5">Scroll ↓</div>
       </div>
+    </section>
+    <div class="separater-container">
+      <div class="separater"></div>
     </div>
-  </div>
-</section>
 
-<!-- WORKS -->
-<section id="works">
-  <div class="section-head reveal">
-    <div class="mono section-num">02 / Selected Works</div>
-    <h2 class="display section-title">Ten years of <em>making things land.</em></h2>
-  </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-head reveal">
+        <div class="mono section-num">01 / About</div>
+        <h2 class="display section-title">
+          I help projects and moments <em>land.</em>
+        </h2>
+      </div>
 
-  <p class="works-intro reveal">
-    A curated look at theatrical campaigns, press events I've hosted or coordinated, and the advocacy work that shaped how I think about storytelling.
-  </p>
+      <div class="about-grid reveal">
+        <div
+          class="about-portrait"
+          style="background-image: url(&quot;images/benson-headshot.jpg&quot;)"
+        ></div>
 
-  <!-- SELECTED CAMPAIGNS -->
-  <div class="category reveal">
-    <div class="category-head">
-      <div class="category-name">Selected Campaigns</div>
-      <div class="mono category-count">18 featured</div>
-    </div>
-    <div class="work-grid">
+        <div class="about-body">
+          <p>
+            I've spent ten years producing, coordinating, and communicating
+            across the entertainment world. I started in a public relations
+            agency at Ogilvy, ran digital and media work for the Taiwan Equality
+            Campaign during one of the most pivotal moments in Taiwanese civil
+            rights history, and spent five years at Sony Pictures Entertainment
+            — first as <em>Publicity Supervisor</em>, then as
+            <em>Marketing Supervisor for Partnerships and Promotions</em>.
+          </p>
+          <p>
+            My work has always sat in between things: between creative and
+            logistics, between brand and audience, between the thing being made
+            and the people it's being made for. At Sony, that meant coordinating
+            gaming co-promotions with PlayStation, Capcom, Ubisoft, PUBG, and
+            Garena — localizing global deals and finding new ways to extend them
+            in the Taiwan market. I like that middle place. I am the bridge, and
+            I build the rapport. It's where most of the actual work happens.
+          </p>
+          <p>
+            I recently moved to Vancouver, and I'm building what comes next —
+            open to full-time roles, freelance projects, and the occasional
+            microphone.
+          </p>
 
-      <a href="https://www.youtube.com/watch?v=GZcQQrdLgZo" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-28-years-later.jpg');"><span class="work-thumb-label">Exhibition</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">28 Years Later — Immersive Experience</div>
-        <div class="work-role">Coordinated 4-zone sensory exhibition, Sony Pictures Entertainment (2025)</div>
-      </a>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-paddington.jpg');">
-          <span class="work-thumb-label">Partnership</span>
-          <div class="work-thumb-alt" style="background-image: url('images/spe-paddington-product.jpg');"></div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year mono">2012</div>
+              <div class="timeline-text">
+                Graduated Bachelor of Business Administration in Finance from
+                National Central University, Taiwan
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year mono">2015</div>
+              <div class="timeline-text">
+                Joined Ogilvy — accounts for Heineken, Xbox, Asics and more
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year mono">2018</div>
+              <div class="timeline-text">
+                Digital Communication &amp; PR Manager at Taiwan Equality
+                Campaign, during the marriage equality movement
+              </div>
+            </div>
+            <div class="timeline-item highlight">
+              <div class="timeline-year mono">2019</div>
+              <div class="timeline-text">
+                Lobbied for same-sex marriage law — Taiwan became the first
+                country in Asia to legalize it
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year mono">2020</div>
+              <div class="timeline-text">
+                Publicity Supervisor at Sony Pictures Entertainment
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year mono">2022</div>
+              <div class="timeline-text">
+                Moved to Marketing Supervisor, Partnerships &amp; Promotions at
+                Sony Pictures Entertainment
+              </div>
+            </div>
+            <div class="timeline-item highlight has-popup">
+              <div class="timeline-year mono">2023</div>
+              <div class="timeline-text">
+                Received Sony Pictures Entertainment's Rainbow of Excellence
+                Award for outstanding partnership performance on Spider-Man:
+                Across the Spider-Verse — selected as one promotions manager out
+                of 20+ global branches<span class="timeline-hint"
+                  >Take a peek ↗</span
+                >
+              </div>
+              <div
+                class="timeline-popup"
+                style="
+                  background-image: url(&quot;images/rainbow-of-excellence.jpg&quot;);
+                "
+              ></div>
+            </div>
+            <div class="timeline-item highlight">
+              <div class="timeline-year mono">2025</div>
+              <div class="timeline-text">
+                Moved to Vancouver — a new chapter
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="work-title">Paddington in Peru × TRiZZO Bubble Tea</div>
-        <div class="work-role">Co-branded bubble tea launch in Taiwan, Sony Pictures Entertainment (2024)</div>
       </div>
-
-      <a href="https://www.youtube.com/watch?v=bBw74-YLo2A" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-spiderverse-freefire.jpg');">
-          <span class="work-thumb-label">Partnership</span>
-        </div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Spider-Man: Across the Spider-Verse × Free Fire (Garena)</div>
-        <div class="work-role">Localized and approved title treatment for Garena's Free Fire × Spider-Verse in-game collaboration, Sony Pictures Entertainment (2023)</div>
-      </a>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-spiderverse-cabin.jpg');">
-          <span class="work-thumb-label">Partnership</span>
-          <div class="work-thumb-alt" style="background-image: url('images/spe-spiderverse.jpg');"></div>
-        </div>
-        <div class="work-title">Spider-Man: Across the Spider-Verse × STARLUX Airlines</div>
-        <div class="work-role">Co-branded amenity kit and in-flight activation, Sony Pictures Entertainment (2023)</div>
-      </div>
-
-      <a href="https://www.youtube.com/watch?v=y0WfpK0HmTQ" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-gran-turismo-ps-plus.jpg');">
-          <span class="work-thumb-label">Partnership</span>
-        </div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Gran Turismo × PlayStation</div>
-        <div class="work-role">Localized and approved title treatment for PlayStation × Gran Turismo 7 co-promotion timed with the theatrical release, Sony Pictures Entertainment (2023)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=PXj_6lpXOok" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-bullet-train.jpg');"><span class="work-thumb-label">Script · Featurette</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Bullet Train — Twin Assassins Intro</div>
-        <div class="work-role">Wrote script for SPE home office production, Sony Pictures Entertainment (2022)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=bIokjeG2Wfc" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-morbius.jpg');"><span class="work-thumb-label">Partnership</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Morbius × Taiwan Blood Foundation</div>
-        <div class="work-role">Themed blood donation truck activation in Ximending, Sony Pictures Entertainment (2022)</div>
-      </a>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-uncharted-premiere.jpg');">
-          <span class="work-thumb-label">Premiere Activation</span>
-          <video class="work-thumb-video" src="images/spe-uncharted-thermal.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
-        </div>
-        <div class="work-title">Uncharted — Thermal-Reactive Premiere</div>
-        <div class="work-role">Heat-revealed screening invitations on-theme with the film's treasure-hunting concept, Sony Pictures Entertainment (2022)</div>
-      </div>
-
-      <a href="https://www.youtube.com/watch?v=NDIxA9m-QVM" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-anita.jpg');"><span class="work-thumb-label">Exhibition</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Anita — Costume Exhibition</div>
-        <div class="work-role">Memorial costume exhibition at Songshan Cultural Park, Sony Pictures Entertainment (2021)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=9v5p4i5fwlU" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-escape-room.jpg');"><span class="work-thumb-label">Activation</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Escape Room: Tournament of Champions</div>
-        <div class="work-role">Live-action puzzle installation at Shin Kong Vieshow, Sony Pictures Entertainment (2021)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=VO6CwAGbXmc" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-venom.jpg');"><span class="work-thumb-label">Campaign Recap</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Venom: Let There Be Carnage</div>
-        <div class="work-role">Multi-week activation recap featurette, Sony Pictures Entertainment (2021)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=87Q5ruD4FNw" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-ghostbusters.jpg');"><span class="work-thumb-label">Partnership</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Ghostbusters: Afterlife × Tianmu Halloween Festival</div>
-        <div class="work-role">Public activation with Taipei Mayor and city festival, Sony Pictures Entertainment (2021)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=twsmzYwyieU" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-resident-evil.jpg');"><span class="work-thumb-label">Premiere</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Resident Evil: Welcome to Raccoon City</div>
-        <div class="work-role">Midnight premiere screening event, Sony Pictures Entertainment (2021)</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=I3cpH_kPHMk" target="_blank" rel="noopener" class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/spe-pride.jpg');"><span class="work-thumb-label">Partnership</span></div>
-        <div class="hover-indicator">→</div>
-        <div class="work-title">Your Name Engraved Herein × Happiest Season × Taiwan Pride</div>
-        <div class="work-role">Two-film activation with Taiwan LGBT Pride parade, Sony Pictures Entertainment (2020)</div>
-      </a>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/ogilvy-xbox.jpg');"><span class="work-thumb-label">Press Tour</span></div>
-        <div class="work-title">Xbox — E3 Press Tour in Los Angeles</div>
-        <div class="work-role">Account lead, Ogilvy (2018)</div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/ogilvy-tiger-beer.jpg');"><span class="work-thumb-label">Experiential</span></div>
-        <div class="work-title">Tiger Beer — Climbing &amp; Zipline Experience</div>
-        <div class="work-role">Account lead, Ogilvy (2017)</div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/ogilvy-asics.jpg');"><span class="work-thumb-label">Press Event</span></div>
-        <div class="work-title">ASICS — Brand Day Press Event</div>
-        <div class="work-role">Account lead, Ogilvy (2016)</div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/ogilvy-heineken.jpg');"><span class="work-thumb-label">VIP Event</span></div>
-        <div class="work-title">Heineken — Pop-up City Lounge VIP Party</div>
-        <div class="work-role">Account lead, Ogilvy (2015)</div>
-      </div>
-
+    </section>
+    <div class="separater-container" style="padding-top: 4rem">
+      <div class="separater"></div>
     </div>
-  </div>
+    <!-- WORKS -->
+    <section id="works" style="padding-top: 2rem">
+      <div class="section-head reveal">
+        <div class="mono section-num">02 / Selected Works</div>
+        <h2 class="display section-title">
+          Ten years of <em>making things land.</em>
+        </h2>
+      </div>
 
-  <!-- LIVE & HOSTING -->
-  <div class="category reveal">
-    <div class="category-head">
-      <div class="category-name">Live &amp; Hosting</div>
-      <div class="mono category-count">4 featured</div>
-    </div>
-    <div class="work-grid">
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-it-ends-with-us.jpg');"><span class="work-thumb-label">Press Conference</span></div>
-        <div class="work-title">It Ends With Us — Charity Press Conference</div>
-        <div class="work-role">Hosted charity press conference with Garden of Hope Foundation and a local florist for domestic violence support, Sony Pictures Entertainment (2024)</div>
+      <div class="works-container">
+        <p class="works-intro reveal">
+          A curated look at gaming partnerships, theatrical campaigns, events
+          I've hosted or coordinated, and the advocacy work that shaped how I
+          think about storytelling.
+        </p>
       </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-anita-exhibition.jpg');"><span class="work-thumb-label">Memorial Event</span></div>
-        <div class="work-title">Anita — Birthday Memorial for Fans</div>
-        <div class="work-role">Hosted birthday memorial event inviting fans to sing along to Anita Mui's concert footage, Sony Pictures Entertainment (2021)</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-bubble-tea-festival.jpg');"><span class="work-thumb-label">Festival</span></div>
-        <div class="work-title">Vancouver Bubble Tea Festival</div>
-        <div class="work-role">Host, Bubble Beat Galaxy (2025)</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-wedding.jpg');"><span class="work-thumb-label">Private</span></div>
-        <div class="work-title">Wedding Hosting</div>
-        <div class="work-role">Emcee for friends' weddings, Taipei (2018–2024)</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ADVOCACY -->
-  <div class="category reveal">
-    <div class="category-head">
-      <div class="category-name">Advocacy</div>
-      <div class="mono category-count">6 featured</div>
-    </div>
-    <div class="work-grid">
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/tec-rally.jpg');"><span class="work-thumb-label">Rally</span></div>
-        <div class="work-title">Rally for Same-Sex Marriage Legalization</div>
-        <div class="work-role">Communications &amp; media coordination, Taiwan Equality Campaign (2018–2019)</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/tec-first-day-wedding.jpg');">
-          <span class="work-thumb-label">Historic Day</span>
-          <div class="work-thumb-alt" style="background-image: url('images/tec-first-day-media.jpg');"></div>
+      <!-- SELECTED CAMPAIGNS -->
+      <div class="category reveal">
+        <div class="category-head">
+          <div class="category-name">Selected Campaigns</div>
+          <div class="mono category-count">18 featured</div>
         </div>
-        <div class="work-title">First Day of Marriage Equality</div>
-        <div class="work-role">Led media coordination for hundreds of reporters as Taiwan became the first country in Asia to legalize same-sex marriage, Taiwan Equality Campaign (2019)</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/tec-ny-exhibition-room.jpg');">
-          <span class="work-thumb-label">Exhibition</span>
-          <div class="work-thumb-alt" style="background-image: url('images/tec-ny-exhibition-guests.jpg');"></div>
+        <div class="work-grid">
+          <a
+            href="https://www.youtube.com/watch?v=GZcQQrdLgZo"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-28-years-later.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Exhibition</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">28 Years Later — Immersive Experience</div>
+            <div class="work-role">
+              Coordinated 4-zone sensory exhibition, Sony Pictures Entertainment
+              (2025)
+            </div>
+          </a>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-paddington.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Partnership</span>
+              <div
+                class="work-thumb-alt"
+                style="
+                  background-image: url(&quot;images/spe-paddington-product.jpg&quot;);
+                "
+              ></div>
+            </div>
+            <div class="work-title">Paddington in Peru × TRiZZO Bubble Tea</div>
+            <div class="work-role">
+              Co-branded bubble tea launch in Taiwan, Sony Pictures
+              Entertainment (2024)
+            </div>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=bBw74-YLo2A"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-spiderverse-freefire.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Partnership</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">
+              Spider-Man: Across the Spider-Verse × Free Fire (Garena)
+            </div>
+            <div class="work-role">
+              Localized and approved title treatment for Garena's Free Fire ×
+              Spider-Verse in-game collaboration, Sony Pictures Entertainment
+              (2023)
+            </div>
+          </a>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-spiderverse-cabin.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Partnership</span>
+              <div
+                class="work-thumb-alt"
+                style="
+                  background-image: url(&quot;images/spe-spiderverse.jpg&quot;);
+                "
+              ></div>
+            </div>
+            <div class="work-title">
+              Spider-Man: Across the Spider-Verse × STARLUX Airlines
+            </div>
+            <div class="work-role">
+              Co-branded amenity kit and in-flight activation, Sony Pictures
+              Entertainment (2023)
+            </div>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=y0WfpK0HmTQ"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-gran-turismo-ps-plus.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Partnership</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Gran Turismo × PlayStation</div>
+            <div class="work-role">
+              Localized and approved title treatment for PlayStation × Gran
+              Turismo 7 co-promotion timed with the theatrical release, Sony
+              Pictures Entertainment (2023)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=PXj_6lpXOok"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-bullet-train.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Script · Featurette</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Bullet Train — Twin Assassins Intro</div>
+            <div class="work-role">
+              Wrote script for SPE home office production, Sony Pictures
+              Entertainment (2022)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=bIokjeG2Wfc"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/spe-morbius.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Partnership</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Morbius × Taiwan Blood Foundation</div>
+            <div class="work-role">
+              Themed blood donation truck activation in Ximending, Sony Pictures
+              Entertainment (2022)
+            </div>
+          </a>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-uncharted-premiere.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Premiere Activation</span>
+              <video
+                class="work-thumb-video"
+                src="images/spe-uncharted-thermal.mp4"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                onmouseover="this.play()"
+                onmouseout="this.pause()"
+              ></video>
+            </div>
+            <div class="work-title">Uncharted — Thermal-Reactive Premiere</div>
+            <div class="work-role">
+              Heat-revealed screening invitations on-theme with the film's
+              treasure-hunting concept, Sony Pictures Entertainment (2022)
+            </div>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=NDIxA9m-QVM"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/spe-anita.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Exhibition</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Anita — Costume Exhibition</div>
+            <div class="work-role">
+              Memorial costume exhibition at Songshan Cultural Park, Sony
+              Pictures Entertainment (2021)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=9v5p4i5fwlU"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-escape-room.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Activation</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Escape Room: Tournament of Champions</div>
+            <div class="work-role">
+              Live-action puzzle installation at Shin Kong Vieshow, Sony
+              Pictures Entertainment (2021)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=VO6CwAGbXmc"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/spe-venom.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Campaign Recap</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Venom: Let There Be Carnage</div>
+            <div class="work-role">
+              Multi-week activation recap featurette, Sony Pictures
+              Entertainment (2021)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=87Q5ruD4FNw"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-ghostbusters.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Partnership</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">
+              Ghostbusters: Afterlife × Tianmu Halloween Festival
+            </div>
+            <div class="work-role">
+              Public activation with Taipei Mayor and city festival, Sony
+              Pictures Entertainment (2021)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=twsmzYwyieU"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/spe-resident-evil.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Premiere</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">Resident Evil: Welcome to Raccoon City</div>
+            <div class="work-role">
+              Midnight premiere screening event, Sony Pictures Entertainment
+              (2021)
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=I3cpH_kPHMk"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+          >
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/spe-pride.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Partnership</span>
+            </div>
+            <div class="hover-indicator">→</div>
+            <div class="work-title">
+              Your Name Engraved Herein × Happiest Season × Taiwan Pride
+            </div>
+            <div class="work-role">
+              Two-film activation with Taiwan LGBT Pride parade, Sony Pictures
+              Entertainment (2020)
+            </div>
+          </a>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/ogilvy-xbox.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Press Tour</span>
+            </div>
+            <div class="work-title">Xbox — E3 Press Tour in Los Angeles</div>
+            <div class="work-role">Account lead, Ogilvy (2018)</div>
+          </div>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/ogilvy-tiger-beer.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Experiential</span>
+            </div>
+            <div class="work-title">
+              Tiger Beer — Climbing &amp; Zipline Experience
+            </div>
+            <div class="work-role">Account lead, Ogilvy (2017)</div>
+          </div>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/ogilvy-asics.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Press Event</span>
+            </div>
+            <div class="work-title">ASICS — Brand Day Press Event</div>
+            <div class="work-role">Account lead, Ogilvy (2016)</div>
+          </div>
+
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/ogilvy-heineken.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">VIP Event</span>
+            </div>
+            <div class="work-title">
+              Heineken — Pop-up City Lounge VIP Party
+            </div>
+            <div class="work-role">Account lead, Ogilvy (2015)</div>
+          </div>
         </div>
-        <div class="work-title">The Wedding Banquet — NYC Exhibition</div>
-        <div class="work-role">Showcased Taiwan's marriage equality movement in New York, Taiwan Equality Campaign (2019)</div>
       </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/tec-pedestrian-crossing.jpg');"><span class="work-thumb-label">Public Space</span></div>
-        <div class="work-title">LGBTQ Pedestrian Crossing</div>
-        <div class="work-role">Public engagement campaign in Taipei, Taiwan Equality Campaign (2019)</div>
+
+      <!-- LIVE & HOSTING -->
+      <div class="category reveal">
+        <div class="category-head">
+          <div class="category-name">Live &amp; Hosting</div>
+          <div class="mono category-count">4 featured</div>
+        </div>
+        <div class="work-grid">
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/host-it-ends-with-us.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Press Conference</span>
+            </div>
+            <div class="work-title">
+              It Ends With Us — Charity Press Conference
+            </div>
+            <div class="work-role">
+              Hosted charity press conference with Garden of Hope Foundation and
+              a local florist for domestic violence support, Sony Pictures
+              Entertainment (2024)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/host-anita-exhibition.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Memorial Event</span>
+            </div>
+            <div class="work-title">Anita — Birthday Memorial for Fans</div>
+            <div class="work-role">
+              Hosted birthday memorial event inviting fans to sing along to
+              Anita Mui's concert footage, Sony Pictures Entertainment (2021)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/host-bubble-tea-festival.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Festival</span>
+            </div>
+            <div class="work-title">Vancouver Bubble Tea Festival</div>
+            <div class="work-role">Host, Bubble Beat Galaxy (2025)</div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/host-wedding.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Private</span>
+            </div>
+            <div class="work-title">Wedding Hosting</div>
+            <div class="work-role">
+              Emcee for friends' weddings, Taipei (2018–2024)
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-coming-out-panel.jpg');"><span class="work-thumb-label">Panel Event</span></div>
-        <div class="work-title">Coming Out in the Workplace Panel</div>
-        <div class="work-role">Coordinated panel on LGBTQ+ visibility in professional life, Taiwan Equality Campaign × EY (2019)</div>
+
+      <!-- ADVOCACY -->
+      <div class="category reveal">
+        <div class="category-head">
+          <div class="category-name">Advocacy</div>
+          <div class="mono category-count">6 featured</div>
+        </div>
+        <div class="work-grid">
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="background-image: url(&quot;images/tec-rally.jpg&quot;)"
+            >
+              <span class="work-thumb-label">Rally</span>
+            </div>
+            <div class="work-title">
+              Rally for Same-Sex Marriage Legalization
+            </div>
+            <div class="work-role">
+              Communications &amp; media coordination, Taiwan Equality Campaign
+              (2018–2019)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/tec-first-day-wedding.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Historic Day</span>
+              <div
+                class="work-thumb-alt"
+                style="
+                  background-image: url(&quot;images/tec-first-day-media.jpg&quot;);
+                "
+              ></div>
+            </div>
+            <div class="work-title">First Day of Marriage Equality</div>
+            <div class="work-role">
+              Led media coordination for hundreds of reporters as Taiwan became
+              the first country in Asia to legalize same-sex marriage, Taiwan
+              Equality Campaign (2019)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/tec-ny-exhibition-room.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Exhibition</span>
+              <div
+                class="work-thumb-alt"
+                style="
+                  background-image: url(&quot;images/tec-ny-exhibition-guests.jpg&quot;);
+                "
+              ></div>
+            </div>
+            <div class="work-title">The Wedding Banquet — NYC Exhibition</div>
+            <div class="work-role">
+              Showcased Taiwan's marriage equality movement in New York, Taiwan
+              Equality Campaign (2019)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/tec-pedestrian-crossing.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Public Space</span>
+            </div>
+            <div class="work-title">LGBTQ Pedestrian Crossing</div>
+            <div class="work-role">
+              Public engagement campaign in Taipei, Taiwan Equality Campaign
+              (2019)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/host-coming-out-panel.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Panel Event</span>
+            </div>
+            <div class="work-title">Coming Out in the Workplace Panel</div>
+            <div class="work-role">
+              Coordinated panel on LGBTQ+ visibility in professional life,
+              Taiwan Equality Campaign × EY (2019)
+            </div>
+          </div>
+          <div class="work-card">
+            <div
+              class="work-thumb has-image"
+              style="
+                background-image: url(&quot;images/host-qpower-panel.jpg&quot;);
+              "
+            >
+              <span class="work-thumb-label">Panel Event</span>
+            </div>
+            <div class="work-title">
+              Qpower Festival — Queer Representation in Entertainment
+            </div>
+            <div class="work-role">
+              Coordinated panel on LGBTQ+ representation in film and TV, Taiwan
+              Equality Campaign (2022)
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="work-card">
-        <div class="work-thumb has-image" style="background-image: url('images/host-qpower-panel.jpg');"><span class="work-thumb-label">Panel Event</span></div>
-        <div class="work-title">Qpower Festival — Queer Representation in Entertainment</div>
-        <div class="work-role">Coordinated panel on LGBTQ+ representation in film and TV, Taiwan Equality Campaign (2022)</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="mono section-num reveal" style="margin-bottom: 1.5rem">
+        03 / Contact
       </div>
+      <h2 class="display contact-headline reveal">
+        Let's <em>make something.</em>
+      </h2>
+
+      <div class="contact-list reveal">
+        <div class="contact-links">
+          <a href="mailto:bensonhanlee@gmail.com" class="contact-link">
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">bensonhanlee@gmail.com</div>
+          </a>
+          <a href="tel:+12368629563" class="contact-link">
+            <div class="contact-link-label">Phone</div>
+            <div class="contact-link-value">+1 (236) 862-9563</div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bensonhanlee/"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">/in/bensonhanlee →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="separater-container-full">
+      <div class="separater"></div>
     </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="mono section-num reveal" style="margin-bottom: 1.5rem;">03 / Contact</div>
-  <h2 class="display contact-headline reveal">Let's <em>make something.</em></h2>
+    <footer class="big-footer">
+      <div>© 2026 Benson Lee. Built with care in Vancouver.</div>
+      <div class="mono">v0.1 / Milestone 1</div>
+    </footer>
+    <footer class="small-footer">
+      <div>© 2026 Benson Lee</div>
+      <div class="mono">v0.1</div>
+    </footer>
+    <div class="mobile-nav-arrows" aria-label="Mobile section navigation">
+      <a
+        href="#home"
+        class="mobile-arrow-btn mobile-prev-btn"
+        aria-label="Go to previous section"
+      >
+        ↑
+      </a>
 
-  <div class="contact-grid reveal">
-    <div></div>
-    <div class="contact-links">
-      <a href="mailto:bensonhanlee@gmail.com" class="contact-link">
-        <div class="contact-link-label">Email</div>
-        <div class="contact-link-value">bensonhanlee@gmail.com</div>
-      </a>
-      <a href="tel:+12368629563" class="contact-link">
-        <div class="contact-link-label">Phone</div>
-        <div class="contact-link-value">+1 (236) 862-9563</div>
-      </a>
-      <a href="https://www.linkedin.com/in/bensonhanlee/" target="_blank" rel="noopener" class="contact-link">
-        <div class="contact-link-label">LinkedIn</div>
-        <div class="contact-link-value">/in/bensonhanlee →</div>
+      <a
+        href="#about"
+        class="mobile-arrow-btn mobile-next-btn"
+        aria-label="Go to next section"
+      >
+        ↓
       </a>
     </div>
-  </div>
-</section>
-
-<footer>
-  <div>© 2026 Benson Lee. Built with care in Vancouver.</div>
-  <div class="mono">v0.1 / Milestone 1</div>
-</footer>
-
-<script>
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
